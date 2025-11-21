@@ -1,0 +1,125 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Login Styles */
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 300px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background: #c0392b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background: #a93226;
+}
+
+/* Dashboard Styles */
+#dashboard-screen {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.btn-logout {
+    width: auto;
+    background: #555;
+    font-size: 0.8em;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+.result-hidden {
+    display: none;
+}
+
+.link-box, .msg-box {
+    margin-top: 15px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.link-box input, .msg-box textarea {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+.btn-preview {
+    display: inline-block;
+    margin-top: 5px;
+    text-decoration: none;
+    color: #2980b9;
+    font-size: 0.9em;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-action {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-action.email { background: #e67e22; }
+.btn-action.zalo { background: #0088ff; border: none;}
