@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đám cưới Thành Luân & Yến Yến</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="no-scroll">
     <div id="envelope-overlay">
-    <div class="envelope-wrapper" onclick="openEnvelope()">
-        <div class="envelope">
-            <div class="flap"></div>
-            <div class="pocket"></div>
-            <div class="letter">
-                <div class="text">
-                    <strong>Thân mời</strong>
-                    <p>Click để mở</p>
+        <div class="envelope-wrapper" onclick="openEnvelope()">
+            <div class="envelope">
+                <div class="flap"></div>
+                <div class="pocket"></div>
+                <div class="letter">
+                    <div class="text">
+                        <strong>Thân mời</strong>
+                        <p>Click để mở</p>
+                    </div>
                 </div>
+                <div class="seal">❤</div>
             </div>
-            <div class="seal">❤</div>
         </div>
-    </div>
     </div>
     <header class="hero">
         <div class="overlay">
@@ -29,6 +32,25 @@
             <h1 class="main-title">Thành Luân & Yến Yến</h1>
             <p class="date">14 . 12 . 2025</p>
             <p class="lunar-date">(25/10 Ất Tỵ)</p>
+
+            <div id="countdown">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <span class="label">Ngày</span>
+                </div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <span class="label">Giờ</span>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <span class="label">Phút</span>
+                </div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <span class="label">Giây</span>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -36,7 +58,7 @@
         <p>Gia đình chúng tôi trân trọng kính mời:</p>
         <h2 id="guest-name">Quý Khách</h2>
         <p>Đến dự bữa cơm thân mật mừng hạnh phúc của hai con chúng tôi.</p>
-        
+
         <div class="parents-info">
             <div class="parent-col">
                 <h3>Nhà Trai</h3>
@@ -155,4 +177,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
