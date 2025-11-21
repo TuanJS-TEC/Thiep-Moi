@@ -1,0 +1,322 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fdfbf7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* --- BANNER --- */
+.hero {
+    /* Đã chèn ảnh banner.jpg vào đây */
+    background-image: url('img/banner.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    height: 70vh; /* Tăng chiều cao để nhìn rõ ảnh nền hơn */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.3); /* Làm tối ảnh nền một chút để chữ nổi bật */
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.date {
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+
+/* --- INVITATION --- */
+.invitation-card {
+    background: white;
+    max-width: 800px;
+    margin: -60px auto 40px;
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 10;
+}
+
+#guest-name {
+    font-family: 'Great Vibes', cursive;
+    color: #c0392b;
+    font-size: 3.5em;
+    margin: 15px 0;
+}
+
+.parents-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    border-top: 1px dashed #ddd;
+    padding-top: 20px;
+    font-size: 0.95em;
+}
+
+/* --- COUPLE SECTION --- */
+.couple-section {
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.couple-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover; /* Quan trọng: Giúp ảnh không bị méo */
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.quote {
+    font-style: italic;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* --- EVENT INFO --- */
+.event-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.event-box {
+    background: white;
+    flex: 1;
+    min-width: 300px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.timeline h4 { margin-bottom: 5px; color: #444; }
+.timeline p { margin: 5px 0; font-size: 0.9em; }
+.highlight { background: #fff0f0; padding: 10px; border-radius: 8px; border: 1px solid #ffcccc; }
+.btn-map { display: inline-block; margin-top: 15px; padding: 8px 20px; background: #555; color: white; text-decoration: none; border-radius: 20px; font-size: 0.9em; }
+
+/* --- GALLERY (ALBUM) --- */
+.gallery-section {
+    padding: 40px 20px;
+    background: #fff;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.02);
+}
+
+/* Làm ảnh ngang trải rộng 2 cột nếu màn hình đủ lớn */
+@media (min-width: 600px) {
+    .gallery-grid .wide {
+        grid-column: span 2;
+    }
+}
+
+/* --- BANKING --- */
+.bank-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.bank-card {
+    background: linear-gradient(135deg, #fdfdfd, #f1f1f1);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    width: 280px;
+}
+.bank-number { font-weight: bold; color: #2980b9; font-size: 1.1em; background: #eef6fb; padding: 5px; border-radius: 5px; display: inline-block; margin: 5px 0; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .parents-info { flex-direction: column; gap: 15px; }
+    .main-title { font-size: 2.8em; }
+    .couple-wrapper { flex-direction: column; }
+    .hero { height: 50vh; } /* Giảm chiều cao banner trên điện thoại */
+}
+
+/* --- HIỆU ỨNG PHONG THƯ --- */
+body.no-scroll {
+    overflow: hidden; /* Khóa thanh cuộn */
+    height: 100vh;
+}
+
+/* 2. Cập nhật màn che phong thư */
+#envelope-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Đổi từ mờ đen sang màu kem giống nền web để che kín hoàn toàn */
+    background-color: #fdfbf7; 
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-out;
+}
+
+.envelope-wrapper {
+    cursor: pointer;
+    transform: scale(0.8); /* Thu nhỏ chút cho vừa mobile */
+}
+
+.envelope {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #d63384; /* Màu phong thư (Hồng đậm) */
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* Nắp phong thư */
+.flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-top: 110px solid #c2185b; /* Màu nắp đậm hơn chút */
+    transform-origin: top;
+    transition: transform 0.6s ease-in-out, z-index 0.2s;
+    z-index: 3;
+}
+
+/* Thân túi phong thư */
+.pocket {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 100px solid #e91e63; /* Màu thân sáng hơn nắp */
+    z-index: 2;
+}
+
+/* Tờ giấy bên trong */
+.letter {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 280px;
+    height: 180px;
+    background-color: #fff;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    border-radius: 5px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.letter .text {
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.5em;
+    margin-top: 30px;
+}
+
+/* Con dấu niêm phong */
+.seal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background-color: #gold;
+    background: radial-gradient(circle, #ffd700 0%, #d4af37 100%);
+    border-radius: 50%;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: opacity 0.4s;
+    animation: pulse 1.5s infinite;
+}
+
+/* Hiệu ứng nhịp đập mời gọi click */
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.1); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+/* --- CLASS KHI MỞ PHONG THƯ (Sẽ được JS thêm vào) --- */
+.envelope-wrapper.open .flap {
+    transform: rotateX(180deg);
+    z-index: 1; /* Nắp lật ra sau tờ giấy */
+}
+
+.envelope-wrapper.open .letter {
+    transform: translateY(-60px); /* Tờ giấy trồi lên */
+    z-index: 3;
+}
+
+.envelope-wrapper.open .seal {
+    opacity: 0; /* Ẩn con dấu */
+}
