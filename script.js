@@ -72,7 +72,7 @@ if (guestName) {
     document.getElementById('form-name').value = formattedName;
 }
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbw3pdOKV9536JXJzOCmdDpG-YUCVcotIjartPLJmM6fH0T7j2-5EOhzt4JWD9NR5sQ_/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxvz5Z-7r1UG3QvW0XCdG9tuqCas8afjkM-KIPTAhAfxiD4bq5LLtIcDFo9DBA1fWo-bQ/exec';
 const form = document.getElementById('wedding-form'); 
 const btnSubmit = document.getElementById('btn-submit');
 const msgSuccess = document.getElementById('msg-success');
