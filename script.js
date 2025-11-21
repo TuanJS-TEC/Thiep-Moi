@@ -64,3 +64,38 @@ function startCountdown() {
 }
 
 startCountdown();
+
+// --- TỰ ĐỘNG ĐIỀN TÊN KHÁCH VÀO FORM ---
+// Lấy tên khách từ biến guestName đã có ở phần đầu file script.js
+if (guestName) {
+    let formattedName = decodeURIComponent(guestName).replace(/[-_]/g, ' ');
+    document.getElementById('form-name').value = formattedName;
+}
+
+// --- XỬ LÝ GỬI FORM VỀ GOOGLE SHEETS ---
+const scriptURL = 'https://script.google.com/macros/s/AKfycbw3pdOKV9536JXJzOCmdDpG-YUCVcotIjartPLJmM6fH0T7j2-5EOhzt4JWD9NR5sQ_/exec'; // DÁN LINK CỦA BẠN VÀO ĐÂY
+const form = document.forms['wedding-form'];
+const btnSubmit = document.getElementById('btn-submit');
+const msgSuccess = document.getElementById('msg-success');
+
+if (form) {
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        
+        // Hiệu ứng nút đang gửi
+        btnSubmit.innerHTML = "Đang gửi...";
+        btnSubmit.disabled = true;
+
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msgSuccess.style.display = "block";
+                form.style.display = "none"; // Ẩn form sau khi gửi xong
+                console.log('Success!', response);
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                btnSubmit.innerHTML = "Lỗi, vui lòng thử lại";
+                btnSubmit.disabled = false;
+            });
+    });
+}

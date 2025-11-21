@@ -24,27 +24,19 @@ function generateInvitation() {
         return;
     }
 
-    // 1. Mã hóa tên để đưa lên URL (đảm bảo tiếng Việt không lỗi)
     const encodedName = encodeURIComponent(nameInput);
     
-    // 2. Tạo đường link hoàn chỉnh
     const finalLink = `${BASE_URL}?guest=${encodedName}`;
 
-    // 3. Tạo nội dung tin nhắn mẫu
     const message = `Thân mời ${nameInput} tới dự đám cưới của Thành Luân & Yến Yến.\n\nMời bạn xem thiệp online tại đây: \n${finalLink}\n\nRất mong sự hiện diện của bạn! ❤`;
 
-    // 4. Hiển thị kết quả ra màn hình
     document.getElementById('result-area').style.display = 'block';
     
-    // Điền vào các ô input
     document.getElementById('generated-link').value = finalLink;
     document.getElementById('generated-msg').value = message;
     
-    // Cập nhật nút xem thử
     document.getElementById('preview-btn').href = finalLink;
 
-    // Cập nhật link gửi mail (mailto)
-    // Lưu ý: mailto không hỗ trợ tốt HTML body, chỉ text cơ bản
     const subject = `Thiệp mời đám cưới: Thành Luân & Yến Yến mời ${nameInput}`;
     const mailBody = encodeURIComponent(message);
     document.getElementById('btn-send-mail').href = `mailto:?subject=${encodeURIComponent(subject)}&body=${mailBody}`;

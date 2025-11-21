@@ -89,7 +89,50 @@
         </div>
         <p class="quote">"Gặp nhau nơi đất khách, nên duyên tại quê nhà."</p>
     </section>
+    <section id="rsvp-section" class="invitation-card">
+        <h2 class="main-title" style="font-size: 2.5em;">Xác Nhận Tham Dự</h2>
+        <p>Sự hiện diện của bạn là niềm vinh hạnh lớn nhất đối với chúng tôi.</p>
+        
+        <form id="wedding-form" class="rsvp-form">
+            <div class="form-group">
+                <label>Tên của bạn:</label>
+                <input type="text" id="form-name" name="Tên khách" required placeholder="Nhập tên của bạn...">
+            </div>
+            
+            <div class="form-group">
+                <label>Số điện thoại:</label>
+                <input type="tel" name="Số điện thoại" required placeholder="Nhập số điện thoại...">
+            </div>
 
+            <div class="form-group">
+                <label>Bạn sẽ tham dự tiệc nào?</label>
+                <select name="Tham dự" required>
+                    <option value="Tiệc Nhà Trai (Hưng Yên)">Tiệc Nhà Trai (Hưng Yên)</option>
+                    <option value="Tiệc Nhà Gái (Hải Phòng)">Tiệc Nhà Gái (Hải Phòng)</option>
+                    <option value="Tham dự cả hai">Tham dự cả hai nơi</option>
+                    <option value="Không thể tham gia">Rất tiếc, mình bận mất rồi</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Bạn là khách của ai?</label>
+                <select name="Mối quan hệ">
+                    <option value="Khách chú rể">Khách của Chú Rể</option>
+                    <option value="Khách cô dâu">Khách của Cô Dâu</option>
+                    <option value="Bạn chung">Bạn chung</option>
+                    <option value="Người thân">Người thân/Họ hàng</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Lời nhắn gửi:</label>
+                <textarea name="Lời nhắn" rows="3" placeholder="Gửi lời chúc đến cô dâu chú rể..."></textarea>
+            </div>
+
+            <button type="submit" id="btn-submit">Gửi Xác Nhận</button>
+        </form>
+        <p id="msg-success" style="display:none; color: green; font-weight: bold; margin-top: 10px;">❤ Cảm ơn bạn đã xác nhận! Hẹn gặp bạn tại lễ cưới!</p>
+    </section>
     <section class="event-section">
         <h2 class="section-title">Thông Tin Tiệc Cưới</h2>
         <div class="event-container">
