@@ -72,9 +72,8 @@ if (guestName) {
     document.getElementById('form-name').value = formattedName;
 }
 
-// --- XỬ LÝ GỬI FORM VỀ GOOGLE SHEETS ---
-const scriptURL = 'https://script.google.com/macros/s/AKfycbw3pdOKV9536JXJzOCmdDpG-YUCVcotIjartPLJmM6fH0T7j2-5EOhzt4JWD9NR5sQ_/exec'; // DÁN LINK CỦA BẠN VÀO ĐÂY
-const form = document.forms['wedding-form'];
+const scriptURL = 'https://script.google.com/macros/s/AKfycbw3pdOKV9536JXJzOCmdDpG-YUCVcotIjartPLJmM6fH0T7j2-5EOhzt4JWD9NR5sQ_/exec';
+const form = document.getElementById('wedding-form'); 
 const btnSubmit = document.getElementById('btn-submit');
 const msgSuccess = document.getElementById('msg-success');
 
@@ -91,6 +90,8 @@ if (form) {
                 msgSuccess.style.display = "block";
                 form.style.display = "none"; // Ẩn form sau khi gửi xong
                 console.log('Success!', response);
+                // Reset nút phòng trường hợp muốn gửi lại (tuỳ chọn)
+                btnSubmit.innerHTML = "Đã gửi thành công";
             })
             .catch(error => {
                 console.error('Error!', error.message);
