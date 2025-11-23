@@ -275,19 +275,50 @@ body {
         gap: 15px;
     }
 
-    .main-title {
-        font-size: 2.8em;
-    }
-
     .couple-wrapper {
         flex-direction: column;
     }
 
+    /* --- SỬA LỖI HIỂN THỊ BANNER --- */
     .hero {
-        height: 50vh;
+        /* Thay đổi từ height cố định sang min-height để tự giãn theo nội dung */
+        height: auto; 
+        min-height: 85vh; /* Tăng chiều cao để đủ chỗ chứa tên và đồng hồ */
+        padding-bottom: 80px; /* Tạo khoảng trống ở dưới để hộp trắngm (card) đè lên mà không che chữ */
     }
 
-    /* Giảm chiều cao banner trên điện thoại */
+    .main-title {
+        font-size: 2.5em; /* Giảm nhẹ cỡ chữ tên Dâu Rể để đỡ bị xuống dòng nhiều */
+        line-height: 1.2;
+    }
+
+    /* Điều chỉnh đồng hồ đếm ngược trên mobile cho gọn hơn */
+    #countdown {
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .time-box {
+        min-width: 55px; /* Thu nhỏ hộp thời gian */
+        padding: 8px 10px;
+    }
+
+    .time-box #days,
+    .time-box #hours,
+    .time-box #minutes,
+    .time-box #seconds {
+        font-size: 1.4em; /* Giảm cỡ số */
+    }
+    
+    .time-box .label {
+        font-size: 0.7em;
+    }
+
+    /* --- CĂN CHỈNH THẺ MỜI --- */
+    .invitation-card {
+        width: 90%; /* Để lề 2 bên cho thoáng */
+        margin: -60px auto 40px; /* Giữ nguyên hiệu ứng đè lên 60px */
+    }
 }
 
 /* --- HIỆU ỨNG PHONG THƯ --- */
